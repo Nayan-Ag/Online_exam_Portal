@@ -13,6 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
    </head>
 <body>
+<input type="hidden" id="status" value="<%= request.getAttribute("status") %>">
   <div class="container">
     <input type="checkbox" id="flip">
     <div class="cover">
@@ -57,5 +58,14 @@
     </div>
     </div>
   </div>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script type="text/javascript">
+    var status = "<%= request.getAttribute("status") %>";
+    if (status === "failed") {
+        swal("Failed", "Invalid credentials", "error");
+    }
+</script>
 </body>
 </html>
+
+

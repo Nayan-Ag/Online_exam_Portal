@@ -57,5 +57,14 @@
     </div>
     </div>
   </div>
+  
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<link rel="stylesheet" href="alert/dist/sweetalert.css">
+	<script type="text/javascript">
+	var status = "<%= request.getAttribute("status") %>";
+	if (status === "failed") {
+		swal("Failed", "No students Exists", "error");
+	}
+	
 </body>
 </html>

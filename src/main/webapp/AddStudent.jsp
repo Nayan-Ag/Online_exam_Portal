@@ -12,6 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
    </head>
 <body>
+<input type="hidden" id="status" value="<%=request.getAttribute("status") %>">
   <div class="container">
     <input type="checkbox" id="flip">
     <div class="cover">
@@ -53,12 +54,12 @@
               
               <div class="input-box">
                 <i class="fas fa-envelope"></i>
-                <input type="text" placeholder="Enter student_age" name="age" required>
+                <input type="text" placeholder="Enter student_age" name="age" >
               </div>
               
               <div class="input-box">
                 <i class="fas fa-envelope"></i>
-                <input type="text" placeholder="Enter student_contact" name="contact" required>
+                <input type="text" placeholder="Enter student_contact" name="contact" >
               </div>
               
            
@@ -74,5 +75,16 @@
     </div>
     </div>
   </div>
+  
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<link rel="stylesheet" href="alert/dist/sweetalert.css">
+	<script type="text/javascript">
+	var status = "<%= request.getAttribute("status") %>";
+	if (status === "failed") {
+		swal("Failed", "No students Exists", "error");
+	}else if(status=="success"){
+		swal("Added" , "Student Data Added Succesfully" , "success");
+	}
+	
 </body>
 </html>
