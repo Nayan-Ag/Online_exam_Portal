@@ -49,4 +49,24 @@
     <servlet-name>AddStudent</servlet-name>
     <url-pattern>/AddStudent</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>StudentsListServlet</display-name>
+    <servlet-name>StudentsListServlet</servlet-name>
+    <servlet-class>com.registration.StudentsListServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>StudentsListServlet</servlet-name>
+    <url-pattern>/StudentsListServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AddResult</display-name>
+    <servlet-name>AddResult</servlet-name>
+    <servlet-class>com.registration.AddResult</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddResult</servlet-name>
+    <url-pattern>/AddResult</url-pattern>
+  </servlet-mapping>
 </web-app>
