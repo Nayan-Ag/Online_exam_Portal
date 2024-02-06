@@ -92,9 +92,11 @@
 	<script type="text/javascript">
 	var status = document.getElementById("status").value;
 	if (status == "failed") {
-		swal("Failed", "Result already exist", "error");
+		swal("Failed", "Entered Details are Wrong", "error");
+	}else if(status=="exist"){
+		swal("Failed", "Result Already Present", "error");
 	}else if(status=="success"){
-			swal("Added", "Result Addedd Successfully", "success");
+		swal("Added", "Result Addedd Successfully", "success");
 	}
 	</script>
 </body>

@@ -76,15 +76,15 @@
     </div>
   </div>
   
-  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 	<link rel="stylesheet" href="alert/dist/sweetalert.css">
 	<script type="text/javascript">
-	var status = "<%= request.getAttribute("status") %>";
-	if (status === "failed") {
-		swal("Failed", "No students Exists", "error");
+	var status = document.getElementById("status").value;
+	if (status == "failed") {
+		swal("Failed", "Result already exist", "error");
 	}else if(status=="success"){
-		swal("Added" , "Student Data Added Succesfully" , "success");
+			swal("Added", "Result Addedd Successfully", "success");
 	}
-	
+	</script>
 </body>
 </html>
