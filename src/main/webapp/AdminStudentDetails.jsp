@@ -8,15 +8,11 @@
     <% 
     Statement st = null;
     Connection con = null;
-    
     try {
         Class.forName("com.mysql.jdbc.Driver");
         con = DriverManager.getConnection("jdbc:mysql://localhost:3306/EXAMPORTAL?useSSL=false", "root", "Nayan_0403@");
         st = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
-        String uid = (String) session.getAttribute("userId");
-        ResultSet rs = st.executeQuery("SELECT * FROM STUDENTS WHERE ID = '" + uid + "';");
-        
-
+        ResultSet rs = st.executeQuery("SELECT * FROM STUDENTS;");
         
         // Check if data is found
         boolean dataFound = false;
@@ -72,3 +68,9 @@
 	</script>
 </body>
 </html>
+
+
+
+
+
+

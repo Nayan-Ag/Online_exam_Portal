@@ -33,11 +33,11 @@ public class AdminLogin extends HttpServlet {
                  response.sendRedirect("AdminDashboard.jsp");
             } else {
                  request.setAttribute("status", "failed");
-                 request.getRequestDispatcher("registration.jsp").forward(request, response);
+                 request.getRequestDispatcher("AdminLogin.jsp").forward(request, response);
             }
         } catch(Exception e) {
             e.printStackTrace();
-            response.sendRedirect("registration.jsp");
+            response.sendRedirect("AdminLogin.jsp");
         } finally {
             try {
                 if (conn != null) {

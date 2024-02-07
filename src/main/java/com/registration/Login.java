@@ -31,15 +31,17 @@ public class Login extends HttpServlet {
 	        
 	        if(rs2.next()) {    
 	        	 session.setAttribute("name" , rs2.getString("NAME"));
+	        	 session.setAttribute("userId", uid); // userId is the ID used during login
+
 	             dispatcher = request.getRequestDispatcher("index.jsp");
 	        } else {
 	             request.setAttribute("status", "failed");
-	             dispatcher = request.getRequestDispatcher("registration.jsp");
+	             dispatcher = request.getRequestDispatcher("StudentLogin.jsp.jsp");
 	        }
 	        dispatcher.forward(request, response);
 	    } catch(Exception e) {
 	        e.printStackTrace();
-	        dispatcher = request.getRequestDispatcher("registration.jsp");
+	        dispatcher = request.getRequestDispatcher("StudentLogin.jsp.jsp");
 	    }
 	}
 

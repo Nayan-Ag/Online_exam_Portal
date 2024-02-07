@@ -20,10 +20,10 @@
         <div class="bg-white bg-opacity-80 p-8 rounded-lg shadow-lg">
             <ul class="space-y-4">
                 <li>
-                    <a href="StudentDetails.jsp" class="text-blue-600 hover:text-blue-800">Student Details</a>
+                    <a href="AdminStudentDetails.jsp" class="text-blue-600 hover:text-blue-800">Student Details</a>
                 </li>
                 <li>
-                    <a href="ResultDetails.jsp" class="text-blue-600 hover:text-blue-800">Student Result</a>
+                    <a href="AdminResultDetails.jsp" class="text-blue-600 hover:text-blue-800">Student Result</a>
                 </li>
                 <li>
                     <a href="AddStudent.jsp" class="text-blue-600 hover:text-blue-800">Add Student</a>
